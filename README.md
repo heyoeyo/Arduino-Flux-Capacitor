@@ -43,10 +43,10 @@ Note: Having 3 LEDs per pin may exceed the Arduino's maximum current output on t
 
 ## Modifying the fade effect
 
-The fade effect models the LEDs as though they are equally spaced on a circle, with a *signal* that constantly rotates around the circle, lighting up each LED as it passes.
+The fade effect models the LEDs as though they are equally spaced on a circle, with a *signal* that constantly rotates around the circle, lighting up each LED as it passes. The animation below illustrates the idea of a signal (green circle) that rotates by each LED, lighting it up. The graph on the right shows the activation pattern for the top-most LED based on the signal position:
 
 <p align="center">
-  <img src="github_images/led_circle.webp">
+  <img src="github_images/led_circle_anim.gif">
 </p>
 
 The pattern used to light up the LEDs can be modified to give different effects, though the default is simply to fade the LEDs in/out as the signal passes each LED. You could, for example, have the LEDs continue to blink/echo as the signal passes by using [sinusoidal](https://www.sparkfun.com/tutorials/329) activation patterns. If you'd like to modify this behavior, it is controlled by the `led_activation_pattern` function of the fading sequence code.
